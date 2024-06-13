@@ -1,0 +1,39 @@
+No.1). Berapa kali string "Hello" dicetak setelah pemanggilan rusak(1000)?
+
+- Jawaban: 1994
+- Penjelasan:
+* Pada loop pertama, tercetak string "Hello" sebanyak 1000 kali, lalu memanggil rusak((int)1000/2) yaitu rusak(500)
+* Pada loop kedua, tercetak string "Hello" sebanyak 500 kali, lalu memanggil  rusak((int)500/2) yaitu rusak(250)
+* Pada loop ketiga, tercetak string "Hello" sebanyak 250 kali, lalu memanggil  rusak((int)250/2) yaitu rusak(125)
+* Pada loop keempat, tercetak string "Hello" sebanyak 125 kali, lalu memanggil  rusak((int)125/2) yaitu rusak(62)
+* Pada loop kelima, tercetak string "Hello" sebanyak 62 kali, lalu memanggil  rusak((int)62/2) yaitu rusak(31)
+* Pada loop keenam, tercetak string "Hello" sebanyak 31 kali, lalu memanggil  rusak((int)31/2) yaitu rusak(15)
+* Pada loop ketujuh, tercetak string "Hello" sebanyak 15 kali, lalu memanggil  rusak((int)15/2) yaitu rusak(7)
+* Pada loop kedelapan, tercetak string "Hello" sebanyak 7 kali, lalu memanggil  rusak((int)7/2) yaitu rusak(3)
+* Pada loop kesembilan, tercetak string "Hello" sebanyak 3 kali, lalu memanggil  rusak((int)3/2) yaitu rusak(1)
+* Pada loop kesepuluh, tercetak string "Hello" sebanyak 1 kali, lalu memanggil  rusak((int)1/2) yaitu rusak(0)
+* Pada loop kesebelas, tidak ada string "Hello" yang tercetak karena n=0, method mengembalikan return
+
+No.2). Berapakah return value dari pemanggilan roger(8,8)?
+
+- Jawaban: 4
+- Penjelasan:
+* Pada loop pertama: roger(8 ,8). Karena 8 % 8 == 0 true, maka return 1 + roger(8, 7)
+* Pada loop kedua: roger(8, 7). Karena 8 % 7 == 0 false, maka return 0 + roger(8, 6)
+* Pada loop ketiga: roger(8, 6). Karena 8 % 6 == 0 false, maka return 0 + roger(8, 5)
+* Pada loop keempat: roger(8, 5). Karena 8 % 5 == 0 false, maka return 0 + roger(8, 4)
+* Pada loop kelima: roger(8, 4). Karena 8 % 4 == 0 true, maka return 1 + roger(8, 3)
+* Pada loop keenam: roger(8, 3). Karena 8 % 3 == 0 false, maka return 0 + roger(8, 2)
+* Pada loop ketujuh: roger(8, 2). Karena 8 % 2 == 0 true, maka return 1 + roger(8, 1)
+* Pada loop kedelapan: roger(8, 1). Karena b==1, maka return 1
+
+- Kesimpulan:
+* roger(8, 1) return 1
+* roger(8, 2) return 1 + 1 = 2
+* roger(8, 3) return 0 + 2 = 2
+* roger(8, 4) return 1 + 2 = 3
+* roger(8, 5) return 0 + 3 = 3
+* roger(8, 6) return 0 + 3 = 3
+* roger(8, 7) return 0 + 3 = 3
+* roger(8, 8) return 1 + 3 = 4
+Jadi, nilai yang dikembalikan dari roger(8, 8) adalah 4
